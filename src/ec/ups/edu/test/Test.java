@@ -132,6 +132,41 @@ public class Test {
 
         principal.add(panelEliminar);
 
+        
+        
+        
+        
+        Panel panelBuscar = new Panel();
+        panelBuscar.setLayout(mallaE);
+        panelBuscar.setBackground(Color.red);
+        
+        Label buscar = new Label("Buscar un telefono");
+        Label buscarT = new Label("Escriba el codigo del telefono a buscar:");
+        TextField buscarT2 = new TextField("1", 5);
+        Button buscarT3 = new Button("Buscar Telefono");
+        buscarT3.setBackground(Color.BLUE);
+        buscarT3.setSize(100, 10);
+        
+        
+        panelBuscar.add(buscar);
+        panelBuscar.add(buscarT);
+        panelBuscar.add(buscarT2);
+        panelBuscar.add(buscarT3);
+        
+        principal.add(panelBuscar);
+        
+        Panel panelListar = new Panel();
+        GridLayout mallaL = new GridLayout(2, 1);
+        panelListar.setLayout(mallaL);
+        
+        Label listar = new Label("Listar sus telefonos");
+        Button listarT = new Button("Listar sus telefonos");
+        
+        panelListar.add(listar);
+        panelListar.add(listarT);
+                
+        principal.add(panelListar);
+        
     }
 
 }
