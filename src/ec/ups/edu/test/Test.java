@@ -21,7 +21,7 @@ public class Test {
         // TODO code application logic here
 
         VentanaTelefono principal = new VentanaTelefono("Interfaz Telefonos");
-        principal.setSize(600, 700);
+        principal.setSize(850, 600);
         principal.setLocation(new Point(410, 10));
 
         Panel panelPrincipal = new Panel();
@@ -32,7 +32,8 @@ public class Test {
         Panel panelSur = new Panel();
         BorderLayout posiciones = new BorderLayout();
 
-        GridLayout mallaP = new GridLayout(4, 2);
+        GridLayout mallaP = new GridLayout(4, 2, 5, 5);
+
         principal.setLayout(mallaP);
 
         Label mensaje = new Label("Bienvenido");
@@ -48,7 +49,7 @@ public class Test {
         panelPrincipal.setLayout(malla);
         panelCentro.setLayout(malla);
 
-        GridLayout mallaR = new GridLayout(4, 2);
+        GridLayout mallaR = new GridLayout(10, 1);
         registrar.setLayout(mallaR);
 
         panelRegistrar.setLayout(posiciones);
@@ -64,7 +65,7 @@ public class Test {
         TextField codigo = new TextField("1", 5);
         Button crearR = new Button("Crear Telefono");
 
-        panelRegistrar.add(registrarT, BorderLayout.NORTH);
+        registrar.add(registrarT);
         registrar.add(numeroR);
         registrar.add(numero);
         registrar.add(tipoR);
@@ -73,17 +74,17 @@ public class Test {
         registrar.add(operadora);
         registrar.add(codigoR);
         registrar.add(codigo);
-        panelRegistrar.add(crearR, BorderLayout.SOUTH);
-        panelRegistrar.add(registrar, BorderLayout.CENTER);
+        registrar.add(crearR);
 
-        // panelCentro.add(panelRegistrar);
-        principal.add(panelRegistrar);
+       // panelCentro.add(registrar);
+        principal.add(registrar);
 
         Panel editar = new Panel();
         Panel panelEditar = new Panel();
 
-        editar.setLayout(mallaR);
+        GridLayout mallaRe = new GridLayout(10, 1);
         panelEditar.setLayout(posiciones);
+        editar.setLayout(mallaRe);
 
         Label editarT = new Label("Editar un Telefono");
         Label codigoE = new Label("Escriba el codigo del telefono a editar:");
@@ -96,7 +97,7 @@ public class Test {
         TextField operadoraE2 = new TextField("etapa", 10);
         Button editarTT = new Button("Editar Telefono");
 
-        panelEditar.add(editarT, BorderLayout.NORTH);
+        editar.add(editarT);
         editar.add(codigoE);
         editar.add(codigoE2);
         editar.add(numeroE);
@@ -105,17 +106,12 @@ public class Test {
         editar.add(tipoE2);
         editar.add(operadoraE);
         editar.add(operadoraE2);
-        panelEditar.add(editarTT, BorderLayout.SOUTH);
-        panelEditar.add(editar, BorderLayout.CENTER);
+        editar.add(editarTT);
+        panelEditar.add(editar);
 
         // panelCentro.add(panelEditar);
-        principal.add(panelEditar);
+        principal.add(panelEditar, BorderLayout.CENTER);
 
-        
-        
-        
-        
-        
         Panel panelEliminar = new Panel();
         GridLayout mallaE = new GridLayout(4, 1);
         panelEliminar.setLayout(mallaE);
@@ -132,40 +128,51 @@ public class Test {
 
         principal.add(panelEliminar);
 
-        
-        
-        
-        
         Panel panelBuscar = new Panel();
         panelBuscar.setLayout(mallaE);
         panelBuscar.setBackground(Color.red);
-        
+
         Label buscar = new Label("Buscar un telefono");
         Label buscarT = new Label("Escriba el codigo del telefono a buscar:");
         TextField buscarT2 = new TextField("1", 5);
         Button buscarT3 = new Button("Buscar Telefono");
         buscarT3.setBackground(Color.BLUE);
         buscarT3.setSize(100, 10);
-        
-        
+
         panelBuscar.add(buscar);
         panelBuscar.add(buscarT);
         panelBuscar.add(buscarT2);
         panelBuscar.add(buscarT3);
-        
+
         principal.add(panelBuscar);
-        
+
         Panel panelListar = new Panel();
         GridLayout mallaL = new GridLayout(2, 1);
         panelListar.setLayout(mallaL);
-        
+
         Label listar = new Label("Listar sus telefonos");
         Button listarT = new Button("Listar sus telefonos");
-        
+
         panelListar.add(listar);
         panelListar.add(listarT);
-                
+
         principal.add(panelListar);
+
+        
+        
+        
+        
+        Panel panelSalir = new Panel();
+        GridLayout mallaS = new GridLayout(1, 2, 7,0);
+        panelSalir.setLayout(mallaS);
+
+        Button cerrarSesion = new Button("Cerrar Sesión");
+        Button salir = new Button("Salir");
+
+        panelSalir.add(cerrarSesion);
+        panelSalir.add(salir);
+
+        principal.add(panelSalir);
         
     }
 
