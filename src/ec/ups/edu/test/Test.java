@@ -40,7 +40,7 @@ public class Test {
         Panel panelMensaje = new Panel();
         Label mensajeUsuario = new Label("Adolfo Jara");
         panelMensaje.add(mensajeUsuario);
-        
+
         principal.add(panelNorte);
         principal.add(panelMensaje);
 
@@ -76,14 +76,9 @@ public class Test {
         panelRegistrar.add(crearR, BorderLayout.SOUTH);
         panelRegistrar.add(registrar, BorderLayout.CENTER);
 
-        //panelCentro.add(panelRegistrar);
+        // panelCentro.add(panelRegistrar);
         principal.add(panelRegistrar);
 
-        
-        
-        
-        
-        
         Panel editar = new Panel();
         Panel panelEditar = new Panel();
 
@@ -113,9 +108,29 @@ public class Test {
         panelEditar.add(editarTT, BorderLayout.SOUTH);
         panelEditar.add(editar, BorderLayout.CENTER);
 
-        panelCentro.add(panelEditar);
-
+        // panelCentro.add(panelEditar);
         principal.add(panelEditar);
+
+        
+        
+        
+        
+        
+        Panel panelEliminar = new Panel();
+        GridLayout mallaE = new GridLayout(4, 1);
+        panelEliminar.setLayout(mallaE);
+
+        Label eliminar = new Label("Eliminar un Telefono");
+        Label eliminarT = new Label("Escriba el codgio del telefono a eliminar:");
+        TextField eliminarT2 = new TextField("1", 5);
+        Button eliminarT3 = new Button("Eliminar Telefono");
+
+        panelEliminar.add(eliminar);
+        panelEliminar.add(eliminarT);
+        panelEliminar.add(eliminarT2);
+        panelEliminar.add(eliminarT3);
+
+        principal.add(panelEliminar);
 
     }
 
