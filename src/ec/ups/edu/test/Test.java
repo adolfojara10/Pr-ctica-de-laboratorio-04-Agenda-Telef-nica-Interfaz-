@@ -31,20 +31,24 @@ public class Test {
         Panel registrar = new Panel();
         Panel panelSur = new Panel();
         BorderLayout posiciones = new BorderLayout();
-        
-        GridLayout mallaP = new GridLayout(7, 1);
+
+        GridLayout mallaP = new GridLayout(4, 2);
         principal.setLayout(mallaP);
 
         Label mensaje = new Label("Bienvenido");
         panelNorte.add(mensaje);
-
+        Panel panelMensaje = new Panel();
+        Label mensajeUsuario = new Label("Adolfo Jara");
+        panelMensaje.add(mensajeUsuario);
+        
         principal.add(panelNorte);
+        principal.add(panelMensaje);
 
         GridLayout malla = new GridLayout(5, 1);
         panelPrincipal.setLayout(malla);
         panelCentro.setLayout(malla);
 
-        GridLayout mallaR = new GridLayout(4, 2, 0, 0);
+        GridLayout mallaR = new GridLayout(4, 2);
         registrar.setLayout(mallaR);
 
         panelRegistrar.setLayout(posiciones);
@@ -72,18 +76,47 @@ public class Test {
         panelRegistrar.add(crearR, BorderLayout.SOUTH);
         panelRegistrar.add(registrar, BorderLayout.CENTER);
 
-       
+        //panelCentro.add(panelRegistrar);
+        principal.add(panelRegistrar);
 
-       // panelCentro.add(panelRegistrar);
+        
+        
+        
+        
+        
+        Panel editar = new Panel();
+        Panel panelEditar = new Panel();
 
-         principal.add(panelRegistrar);
-        
-         
-         
-        
+        editar.setLayout(mallaR);
+        panelEditar.setLayout(posiciones);
 
-       
-        
+        Label editarT = new Label("Editar un Telefono");
+        Label codigoE = new Label("Escriba el codigo del telefono a editar:");
+        TextField codigoE2 = new TextField("1", 5);
+        Label numeroE = new Label("Nuevo numero");
+        TextField numeroE2 = new TextField("072455666", 10);
+        Label tipoE = new Label("Tipo de telefono:");
+        TextField tipoE2 = new TextField("casa", 10);
+        Label operadoraE = new Label("Operadora del telefono: ");
+        TextField operadoraE2 = new TextField("etapa", 10);
+        Button editarTT = new Button("Editar Telefono");
+
+        panelEditar.add(editarT, BorderLayout.NORTH);
+        editar.add(codigoE);
+        editar.add(codigoE2);
+        editar.add(numeroE);
+        editar.add(numeroE2);
+        editar.add(tipoE);
+        editar.add(tipoE2);
+        editar.add(operadoraE);
+        editar.add(operadoraE2);
+        panelEditar.add(editarTT, BorderLayout.SOUTH);
+        panelEditar.add(editar, BorderLayout.CENTER);
+
+        panelCentro.add(panelEditar);
+
+        principal.add(panelEditar);
+
     }
 
 }
