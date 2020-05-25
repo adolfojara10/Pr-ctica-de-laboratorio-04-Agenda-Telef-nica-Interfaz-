@@ -21,7 +21,7 @@ public class Test {
         // TODO code application logic here
 
         VentanaTelefono principal = new VentanaTelefono("Interfaz Telefonos");
-        principal.setSize(850, 600);
+       /* principal.setSize(850, 600);
         principal.setLocation(new Point(410, 10));
 
         Panel panelPrincipal = new Panel();
@@ -38,11 +38,17 @@ public class Test {
 
         Label mensaje = new Label("Bienvenido");
         panelNorte.add(mensaje);
+        panelNorte.setBackground(Color.YELLOW);
+        *
+        */
+        
+        
+        /*
         Panel panelMensaje = new Panel();
         Label mensajeUsuario = new Label("Adolfo Jara");
-        panelMensaje.add(mensajeUsuario);
+        panelMensaje.add(mensajeUsuario);*/
 
-        principal.add(panelNorte, BorderLayout.NORTH);
+       /* principal.add(panelNorte, BorderLayout.NORTH);
         //principal.add(panelMensaje);
 
         GridLayout malla = new GridLayout(5, 1);
@@ -164,6 +170,8 @@ public class Test {
         panelListar.add(listarT);
 
         panelCentro.add(panelListar);
+        panelCentro.setBackground(Color.lightGray);
+        panelCentro.setForeground(Color.black);
         //principal.add(panelListar);
 
         principal.add(panelCentro, BorderLayout.CENTER);
@@ -181,6 +189,9 @@ public class Test {
         panelSalir.add(salir);
 
         principal.add(panelSalir, BorderLayout.SOUTH);
+
+        *
+        */
 
     }
 
