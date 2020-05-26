@@ -51,6 +51,8 @@ public class VentanaTelefono extends Frame {
 
         // GridLayout mallar = new GridLayout(3, 1);
         //panelRegistrar.setLayout(mallar);
+        
+        //para crear la opcion de registrar
         Label registrarT = new Label("Registrar un nuevo Telefono");
         Label espacio = new Label("");
         Label numeroR = new Label("Numero del telefono:\n");
@@ -64,7 +66,8 @@ public class VentanaTelefono extends Frame {
         Button crearR = new Button("Crear Telefono");
         crearR.setBackground(Color.black);
         crearR.setForeground(Color.YELLOW);
-
+        
+        //se añaden al panel
         registrar.add(registrarT);
         registrar.add(espacio);
         registrar.add(numeroR);
@@ -78,9 +81,11 @@ public class VentanaTelefono extends Frame {
         //panelRegistrar.add(registrar);
         registrar.add(crearR);
 
+        //se añade al panel que va a ser añadido al frame
         panelCentro.add(registrar);
         //principal.add(registrar);
 
+        //para el panel editar
         Panel editar = new Panel();
         Panel panelEditar = new Panel();
 
@@ -102,6 +107,7 @@ public class VentanaTelefono extends Frame {
         editarTT.setBackground(Color.black);
         editarTT.setForeground(Color.yellow);
 
+        //se añaden al panel
         editar.add(editarT, BorderLayout.NORTH);
         editar.add(espacio2);
         editar.add(codigoE);
@@ -114,10 +120,12 @@ public class VentanaTelefono extends Frame {
         editar.add(operadoraE2);
         editar.add(editarTT);
         //panelEditar.add(editar, BorderLayout.CENTER);
-
+        
+        //se añade al panel que va a ser añadido al frame
         panelCentro.add(editar);
         //principal.add(panelEditar, BorderLayout.CENTER);
 
+        //para el panel eliminar
         Panel panelEliminar = new Panel();
         GridLayout mallaE = new GridLayout(4, 1);
         panelEliminar.setLayout(mallaE);
@@ -129,14 +137,17 @@ public class VentanaTelefono extends Frame {
         eliminarT3.setBackground(Color.black);
         eliminarT3.setForeground(Color.yellow);
 
+        //se añaden al panel 
         panelEliminar.add(eliminar);
         panelEliminar.add(eliminarT);
         panelEliminar.add(eliminarT2);
         panelEliminar.add(eliminarT3);
 
+        //se añade al panel que va a ser añadido al frame
         panelCentro.add(panelEliminar);
         //principal.add(panelEliminar);
 
+        //para el panel buscar
         Panel panelBuscar = new Panel();
         panelBuscar.setLayout(mallaE);
         //panelBuscar.setBackground(Color.red);
@@ -149,14 +160,17 @@ public class VentanaTelefono extends Frame {
         buscarT3.setForeground(Color.yellow);
         buscarT3.setSize(100, 10);
 
+        //se añaden al panel
         panelBuscar.add(buscar);
         panelBuscar.add(buscarT);
         panelBuscar.add(buscarT2);
         panelBuscar.add(buscarT3);
 
+        //se añade al panel que va a ser añadido al frame
         panelCentro.add(panelBuscar);
         //principal.add(panelBuscar);
 
+        //para el panel de listar telefonos
         Panel panelListar = new Panel();
         GridLayout mallaL = new GridLayout(2, 1);
         panelListar.setLayout(mallaL);
@@ -166,28 +180,37 @@ public class VentanaTelefono extends Frame {
         listarT.setBackground(Color.black);
         listarT.setForeground(Color.yellow);
         
+        //se añaden al panel 
         panelListar.add(listar);
         panelListar.add(listarT);
 
+        //se añade al panel que va a ser añadido al frame
         panelCentro.add(panelListar);
+        
+        //se añaden colores al panel centro
         panelCentro.setBackground(Color.lightGray);
         panelCentro.setForeground(Color.black);
         //principal.add(panelListar);
 
+        //se añade el panel centro al centro del frame
         this.add(panelCentro, BorderLayout.CENTER);
 
+        //para las opciones de cerrar sesion y salir
         Panel panelSalir = new Panel();
         GridLayout mallaS = new GridLayout(1, 2, 7, 0);
         panelSalir.setLayout(mallaS);
 
+        //los botones y los colores
         Button cerrarSesion = new Button("Cerrar Sesión");
         cerrarSesion.setBackground(Color.red);
         Button salir = new Button("Salir");
         salir.setBackground(Color.red);
 
+        //se añaden al panel
         panelSalir.add(cerrarSesion);
         panelSalir.add(salir);
 
+        //se añade en la parte inferior del frame
         this.add(panelSalir, BorderLayout.SOUTH);
 
         this.setVisible(true);
